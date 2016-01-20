@@ -13,22 +13,15 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
+// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace AL_Timer
-{
+namespace AL_Timer {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
-    {
-        public MainPage()
-        {
+    public sealed partial class Timer : Page {
+        public Timer() {
             this.InitializeComponent();
-        }
-
-        private void imgTimer_Tapped(object sender, TappedRoutedEventArgs e) {
-            Frame.Navigate(typeof(Timer));
         }
     }
 }
