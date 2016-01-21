@@ -27,6 +27,8 @@ namespace AL_Timer {
         DispatcherTimer stopWatchTimer;
         Stopwatch stopWatch;
         private long ms, ss, mm, hh, dd, lastLapTime;
+
+
         List<long> lapTimes;
 
         // Constructor
@@ -74,6 +76,7 @@ namespace AL_Timer {
             tblMS.Text = ms.ToString("000");
         }
 
+        // Start/Stop Button
         private void btnStartStop_Click(object sender, RoutedEventArgs e) {
             
             // start the stopwatch
@@ -92,6 +95,42 @@ namespace AL_Timer {
                 btnResetLap.Content = "Reset";
                 btnStartStop.Content = "Start";
                 btnStartStop.Background = new SolidColorBrush(Colors.Green);
+            }
+        }
+
+        // Reset/Lap Button
+        private void btnResetLap_Click(object sender, RoutedEventArgs e) {
+            long currentTime;
+            TextBlock tblLapTime;
+
+            if(btnResetLap.Content.ToString() == "Reset") {
+                // rezero all timers
+                stopWatch.Reset();
+                dd = hh = mm = ss = ms = 0;
+                tblDD.Text = "00";
+                tblHH.Text = "00";
+                tblMM.Text = "00";
+                tblSS.Text = "00";
+                tblMS.Text = "00";
+            }
+            else { // Text = "Lap"
+                // save the current time, add to list
+                if(lapTimes == null) {
+                    lapTimes = new List<long>();
+                    lastLapTime = 0;
+                }
+
+                // get the ellapsed milliseconde
+                // substract the last one and then store the difference
+                currentTime = stopWatch.ElapsedMilliseconds;
+                lapTimes.Add(currentTime - lastLapTime);
+                lastLapTime = currentTime;
+
+                tblLapTime = new TextBlock();
+                tblLapTime.Text = lapTimes.Last().ToString();
+                tblLapTime.HorizontalAlignment = HorizontalAlignment.Center;
+
+                spLapTimes.Children.Add(tblLapTime);
             }
         }
     }
