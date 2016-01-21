@@ -76,16 +76,14 @@
                         Margin="5"
                         Content="Reset" Width="75" Click="btnResetLap_Click"></Button>
             </StackPanel>
-        </StackPanel>
 
-        <ScrollViewer HorizontalAlignment="Center"
-                      VerticalAlignment="Top"
-                      Margin="0, 200, 0, 0"
-                      HorizontalScrollMode="Disabled"
-                      VerticalScrollMode="Auto">
             <StackPanel x:Name="spLapTimes"
-                        HorizontalAlignment="Center"
-                        Margin="5"></StackPanel>
-        </ScrollViewer>
+                        HorizontalAlignment="Left"
+                        Margin="10 50 0 0"
+                        Width="200"
+                        Orientation="Vertical"
+                        ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    />
+        </StackPanel>
     </Grid>
 </Page>

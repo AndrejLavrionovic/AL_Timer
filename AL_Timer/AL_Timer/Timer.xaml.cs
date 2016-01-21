@@ -26,10 +26,9 @@ namespace AL_Timer {
         // Instances
         DispatcherTimer stopWatchTimer;
         Stopwatch stopWatch;
-        private long ms, ss, mm, hh, dd, lastLapTime;
-
-
+        private long ms, ss, mm, hh, dd, lastLapTime, lapMS, lapSS, lapMM, lapHH, lapDD;
         List<long> lapTimes;
+        int lap = 0;
 
         // Constructor
         public Timer() {
@@ -107,31 +106,69 @@ namespace AL_Timer {
                 // rezero all timers
                 stopWatch.Reset();
                 dd = hh = mm = ss = ms = 0;
+                lap = 0;
                 tblDD.Text = "00";
                 tblHH.Text = "00";
                 tblMM.Text = "00";
                 tblSS.Text = "00";
                 tblMS.Text = "00";
+
+                spLapTimes.Children.Clear();
+                lapTimes.Clear();
+                lastLapTime = 0;
             }
             else { // Text = "Lap"
                 // save the current time, add to list
                 if(lapTimes == null) {
                     lapTimes = new List<long>();
                     lastLapTime = 0;
+                    lap = 0;
                 }
+
+                lap++; // incrementing lap
 
                 // get the ellapsed milliseconde
                 // substract the last one and then store the difference
                 currentTime = stopWatch.ElapsedMilliseconds;
+
                 lapTimes.Add(currentTime - lastLapTime);
                 lastLapTime = currentTime;
 
                 tblLapTime = new TextBlock();
-                tblLapTime.Text = lapTimes.Last().ToString();
+                tblLapTime.Text = "Lap " + lap + " > " + lapTime(lapTimes.Last());
                 tblLapTime.HorizontalAlignment = HorizontalAlignment.Center;
 
                 spLapTimes.Children.Add(tblLapTime);
             }
+        }
+
+        private String lapTime(long lastTime) {
+            string time = null;
+
+            if (lastTime != 0) {
+                lapSS = lastTime / 1000;
+                lastTime = lastTime % 1000;
+
+                lapMM = lapSS / 60;
+                lapSS = lapSS % 60;
+
+                lapHH = lapMM / 60;
+                lapMM = lapMM % 60;
+
+                lapDD = lapHH / 24;
+                lapHH = lapHH % 24;
+
+                time = lapDD.ToString("00") + ":" +
+                    lapHH.ToString("00") + ":" +
+                    lapMM.ToString("00") + ":" +
+                    lapSS.ToString("00") + ":" +
+                    lastTime.ToString("000");
+            }
+            else {
+                time = "00:00:00:00:000";
+            }
+
+            return time;
         }
     }
 }
