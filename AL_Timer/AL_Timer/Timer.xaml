@@ -11,14 +11,58 @@
         <StackPanel
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
-                Margin="10">
-            <TextBlock x:Name="tbTimeDisplay"
+                Margin="10" Padding="0,50,0,0">
+            <StackPanel Orientation="Horizontal" >
+                <TextBlock x:Name="tblDD"
+                       Margin="1"
+                       Text="00"
+                       Style="{StaticResource TitleTextBlockStyle}" Width="40" Height="50" HorizontalAlignment="Center" FontSize="30.667" VerticalAlignment="Center" Padding="2,0,0,0"
+                        />
+                <TextBlock
+                    Text=":"
+                    Height="50"
+                    Margin="1"
+                    HorizontalAlignment="Center" Width="10" FontSize="26.667" VerticalAlignment="Center"
+                    ></TextBlock>
+                <TextBlock x:Name="tblHH"
+                       Margin="1"
+                       Text="00"
+                       Style="{StaticResource TitleTextBlockStyle}" Width="40" Height="50" HorizontalAlignment="Center" FontSize="30.667" VerticalAlignment="Center" Padding="2,0,0,0"/>
+                <TextBlock
+                    Text=":"
+                    Height="50"
+                    Margin="1"
+                    HorizontalAlignment="Center" Width="10" FontSize="26.667" VerticalAlignment="Center"
+                    ></TextBlock>
+                <TextBlock x:Name="tblMM"
+                       Margin="1"
+                       Text="00"
+                       Style="{StaticResource TitleTextBlockStyle}" Width="40" Height="50" HorizontalAlignment="Center" FontSize="30.667" VerticalAlignment="Center" Padding="2,0,0,0"/>
+                <TextBlock
+                    Text=":"
+                    Height="50"
+                    Margin="1"
+                    HorizontalAlignment="Center" Width="10" FontSize="26.667" VerticalAlignment="Center"
+                    ></TextBlock>
+                <TextBlock x:Name="tblSS"
+                       Margin="1"
+                       Text="00"
+                       Style="{StaticResource TitleTextBlockStyle}" Width="40" Height="50" HorizontalAlignment="Center" FontSize="30.667" VerticalAlignment="Center" Padding="2,0,0,0"/>
+                <TextBlock
+                    Text=":"
+                    Height="50"
+                    Margin="1"
+                    HorizontalAlignment="Center" Width="10" FontSize="26.667" VerticalAlignment="Center"
+                    ></TextBlock>
+                <TextBlock x:Name="tblMS"
                        HorizontalAlignment="Center"
-                       Margin="5"
-                       Text="00:00:00:00:000"
-                       Style="{StaticResource TitleTextBlockStyle}">
-                
-            </TextBlock>
+                       Margin="1"
+                       Text="000"
+                       Style="{StaticResource TitleTextBlockStyle}" Width="56" Height="50" FontSize="30.667" VerticalAlignment="Center" Padding="2,0,0,0">
+
+                </TextBlock>
+
+            </StackPanel>
             <StackPanel Orientation="Horizontal"
                         Margin="5"
                         HorizontalAlignment="Center"
@@ -27,10 +71,10 @@
                         Content="Start"
                         Margin="5"
                         Background="Green"
-                        Foreground="White" Click="btnStartStop_Click"></Button>
+                        Foreground="White" Click="btnStartStop_Click" Width="75"></Button>
                 <Button x:Name="btnResetLap"
                         Margin="5"
-                        Content="Reset"></Button>
+                        Content="Reset" Width="75"></Button>
             </StackPanel>
         </StackPanel>
 
