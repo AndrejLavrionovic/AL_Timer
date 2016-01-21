@@ -23,5 +23,9 @@ namespace AL_Timer {
         public Timer() {
             this.InitializeComponent();
         }
+
+        private void btnStartStop_Click(object sender, RoutedEventArgs e) {
+
+        }
     }
 }
