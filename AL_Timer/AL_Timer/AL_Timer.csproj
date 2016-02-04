@@ -113,15 +113,19 @@
     <None Include="AL_Timer_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\logo1240ss.png" />
+    <Content Include="Assets\logo142sq.png" />
+    <Content Include="Assets\logo300sq.png" />
+    <Content Include="Assets\logo310sq.png" />
+    <Content Include="Assets\logo48sq.png" />
+    <Content Include="Assets\logo50sq.png" />
+    <Content Include="Assets\logo620sq.png" />
+    <Content Include="Assets\logo620wd.png" />
+    <Content Include="Assets\logo71sq.png" />
+    <Content Include="Assets\logo88sq.png" />
+    <Content Include="Assets\logo96sq.png" />
     <Content Include="img\Timer.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
-    <Content Include="Assets\StoreLogo.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

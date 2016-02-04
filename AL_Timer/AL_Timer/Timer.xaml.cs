@@ -114,7 +114,9 @@ namespace AL_Timer {
                 tblMS.Text = "00";
 
                 spLapTimes.Children.Clear();
-                lapTimes.Clear();
+                if(lapTimes != null) {
+                    lapTimes.Clear();
+                }
                 lastLapTime = 0;
             }
             else { // Text = "Lap"
