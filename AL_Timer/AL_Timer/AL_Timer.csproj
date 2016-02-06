@@ -16,7 +16,11 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>AL_Timer_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>AL_Timer_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>1CAA9724ED01160C689846B890B2108CD6516EA5</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +96,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="AL_Timer_StoreKey.pfx" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -113,18 +118,43 @@
     <None Include="AL_Timer_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\logo1240ss.png" />
-    <Content Include="Assets\logo142sq.png" />
-    <Content Include="Assets\logo300sq.png" />
-    <Content Include="Assets\logo310sq.png" />
-    <Content Include="Assets\logo48sq.png" />
-    <Content Include="Assets\logo50sq.png" />
-    <Content Include="Assets\logo620sq.png" />
-    <Content Include="Assets\logo620wd.png" />
-    <Content Include="Assets\logo71sq.png" />
-    <Content Include="Assets\logo88sq.png" />
-    <Content Include="Assets\logo96sq.png" />
+    <Content Include="Assets\logo150sq.scale-100.png" />
+    <Content Include="Assets\logo150sq.scale-125.png" />
+    <Content Include="Assets\logo150sq.scale-150.png" />
+    <Content Include="Assets\logo150sq.scale-200.png" />
+    <Content Include="Assets\logo150sq.scale-400.png" />
+    <Content Include="Assets\logo310sq.scale-100.png" />
+    <Content Include="Assets\logo310sq.scale-125.png" />
+    <Content Include="Assets\logo310sq.scale-150.png" />
+    <Content Include="Assets\logo310sq.scale-200.png" />
+    <Content Include="Assets\logo310sq.scale-400.png" />
+    <Content Include="Assets\logo310wd.scale-100.png" />
+    <Content Include="Assets\logo310wd.scale-125.png" />
+    <Content Include="Assets\logo310wd.scale-150.png" />
+    <Content Include="Assets\logo310wd.scale-200.png" />
+    <Content Include="Assets\logo310wd.scale-400.png" />
+    <Content Include="Assets\logo44sq.scale-100.png" />
+    <Content Include="Assets\logo44sq.scale-125.png" />
+    <Content Include="Assets\logo44sq.scale-150.png" />
+    <Content Include="Assets\logo44sq.scale-200.png" />
+    <Content Include="Assets\logo44sq.scale-400.png" />
+    <Content Include="Assets\logo50sq.scale-100.png" />
+    <Content Include="Assets\logo50sq.scale-125.png" />
+    <Content Include="Assets\logo50sq.scale-150.png" />
+    <Content Include="Assets\logo50sq.scale-200.png" />
+    <Content Include="Assets\logo50sq.scale-400.png" />
+    <Content Include="Assets\logo620ss.scale-100.png" />
+    <Content Include="Assets\logo620ss.scale-125.png" />
+    <Content Include="Assets\logo620ss.scale-150.png" />
+    <Content Include="Assets\logo620ss.scale-200.png" />
+    <Content Include="Assets\logo620ss.scale-400.png" />
+    <Content Include="Assets\logo71.scale-100.png" />
+    <Content Include="Assets\logo71.scale-125.png" />
+    <Content Include="Assets\logo71.scale-150.png" />
+    <Content Include="Assets\logo71.scale-200.png" />
+    <Content Include="Assets\logo71.scale-400.png" />
     <Content Include="img\Timer.png" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +171,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
